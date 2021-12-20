@@ -24,8 +24,9 @@ namespace SharedModels.Models
         [Required]
         public string Address { get; set; }
         [Required]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{yyyy-MM-dd}")]
         public DateTime OrderDate { get; set; }
         public virtual List<OrderDetails> orderDetails { get; set; }
+        [Display(Name="Order Processed")]
+        public bool IsProcessed { get; set; }
     }
 }
